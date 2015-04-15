@@ -69,9 +69,10 @@ classifier.fit(training_data)
 
 When we ran the classifier against tweets that we have pulled using the Twitter API, MetaMind gives us output as a JSON list of JSON objects containing our input tweet as well as a label it predicted for that Tweet.
 
-```json
+```
 [
   {u'user_value': u"Furious7 was the worst movie I've ever seen. Period.", u'probability': 0.819143650919281, u'label': u'1'}, 
   {u'user_value': u'I loved Skyfall. Brilliant!', u'probability': 0.9619668949957287, u'label': u'5'}
 ]
 ```
+<small><i>note: Output is given for the 3-class model where 1:negative, 3:neutral and 5:positive)</i></small>
