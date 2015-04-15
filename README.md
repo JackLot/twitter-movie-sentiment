@@ -64,3 +64,14 @@ training_data.add_samples("rt.train-3.tsv", input_type="tsv")
 classifier = ClassificationModel(private=True, name="RT movie 3-value classifier")
 classifier.fit(training_data)
 ```
+
+### Running the classifier
+
+When we ran the classifier against tweets that we have pulled using the Twitter API, MetaMind gives us output as a JSON list of JSON objects containing our input tweet as well as a label it predicted for that Tweet.
+
+```json
+[
+  {u'user_value': u"Furious7 was the worst movie I've ever seen. Period.", u'probability': 0.819143650919281, u'label': u'1'}, 
+  {u'user_value': u'I loved Skyfall. Brilliant!', u'probability': 0.9619668949957287, u'label': u'5'}
+]
+```
