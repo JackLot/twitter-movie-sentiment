@@ -50,6 +50,8 @@ MetaMind is a new API service that allows users to get up and running quickly wi
 text classification and ML. MetaMind has its own Twitter Sentiment classifier pre-built, 
 but for this project we created our own classifer by feeding the MetaMind classification 
 model builder formatted training data from the Kaggle Rotten Tomatoes dataset.
+
+From [classification/build_classifier_mm.py](classification/build_classifier_mm.py)
 ```python
 #Create the classification training data to feed into the model
 training_data = ClassificationData(private=True, data_type="text", name="RT snippets 3 feature training data")
