@@ -43,13 +43,16 @@ building tools.
 
 ## Classification with MetaMind
 
-We'll start off by building a text classifier with the MetaMind API trained on a dataset of Rotten Tomatoes
-movie reviews.
-
 MetaMind is a new API service that allows users to get up and running quickly with 
 text classification and ML. MetaMind has its own Twitter Sentiment classifier pre-built, 
 but for this project we created our own classifer by feeding the MetaMind classification 
 model builder formatted training data from the Kaggle Rotten Tomatoes dataset.
+
+
+### Building the classification model
+
+We'll start off by building a text classifier with the MetaMind API trained on a dataset of Rotten Tomatoes
+movie reviews.
 
 From [classification/build_classifier_mm.py](classification/build_classifier_mm.py)
 ```python
