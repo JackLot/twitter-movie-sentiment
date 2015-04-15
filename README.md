@@ -1,5 +1,5 @@
 # Twitter Movie Sentiment Analysis
-Given a set of tweets about a movie determine if the Twitter community has a positive or negative overall opinion of that movie
+Given a set of tweets about a movie determine if the Twitter community has a positive or negative overall opinion of that movie. We will use a combination of [MetaMind](https://www.metamind.io/) and/or [Vowpal Wabbit](http://hunch.net/~vw/) classifiers to build our models and test them with tweets pulled using the Twitter API.
 
 ## Training/Test data
 Since this problem hasn't been studied much before we will train our models with datasets that are closely related
@@ -80,4 +80,4 @@ When we ran the classifier against tweets that we have pulled using the Twitter 
 
 ## Analyzing our results
 
-Now all that is left is to take the results of feeding our MetaMind and Vowpal Wabbit classifiers Tweets, and determine if the number of positive tweets outweights the number of negative tweets. We can then compare our overall ranking of positive/negative for the given movie to the RottenTomatoes and IMDb user reviews to see how accuratly we can classify movies just based on Tweets.
+Now all that is left is to take the results of feeding our MetaMind and Vowpal Wabbit classifiers tweets, and determine if the number of positive tweets outweights the number of negative tweets (I think we can ignore neutral tweets). We can then compare our overall ranking of positive/negative for the given movie to the RottenTomatoes and IMDb user reviews to see how accuratly we can classify movies just based on tweets.
