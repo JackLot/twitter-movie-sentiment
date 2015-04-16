@@ -39,7 +39,6 @@ class MyListener(tweepy.StreamListener):
 def main():
     while True:
         key_words = read_file_lines("keywords.txt")
-        users = read_file_lines("users.txt")
         # Format of auth_data file is:
         # consumer key
         # consumer secret
@@ -53,7 +52,7 @@ def main():
         api = tweepy.API(auth)
         stream_listener = MyListener()
         stream = tweepy.Stream(auth=api.auth, listener=stream_listener, secure=True)
-        stream.filter(track=key_words, follow=users)
+        stream.filter(track=key_words)
 
 
 if __name__ == '__main__':

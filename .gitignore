@@ -55,3 +55,9 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Jet Brains
+.idea/
+
+# Backup files
+*~
