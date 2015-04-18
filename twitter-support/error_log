@@ -1,0 +1,45 @@
+{"errors":[{"message":"Rate limit exceeded","code":88}]}{"errors":[{"message":"Rate limit exceeded","code":88}]}{"errors":[{"message":"Rate limit exceeded","code":88}]}{"errors":[{"message":"Rate limit exceeded","code":88}]}{"errors":[{"message":"Rate limit exceeded","code":88}]}{"errors":[{"message":"Rate limit exceeded","code":88}]}{"errors":[{"message":"Rate limit exceeded","code":88}]}{"errors":[{"message":"Rate limit exceeded","code":88}]}{"errors":[{"message":"Rate limit exceeded","code":88}]}{"errors":[{"code":195,"message":"Missing or invalid url parameter."}]}
+{"errors":[{"code":195,"message":"Missing or invalid url parameter."}]}
+04:03:02.250349{"errors":[{"code":195,"message":"Missing or invalid url parameter."}]}
+04:03:02.455346{"errors":[{"code":195,"message":"Missing or invalid url parameter."}]}
+04:06:48.942306{"errors":[{"code":195,"message":"Missing or invalid url parameter."}]}
+04:07:02.823732{"errors":[{"message":"Rate limit exceeded","code":88}]}
+04:07:03.032956{"errors":[{"message":"Rate limit exceeded","code":88}]}
+04:07:03.248474{"errors":[{"message":"Rate limit exceeded","code":88}]}
+04:07:23.902079{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:42:29.915757{"errors":[{"code":195,"message":"Missing or invalid url parameter."}]}
+12:42:30.135473{"errors":[{"code":195,"message":"Missing or invalid url parameter."}]}
+12:42:30.365185{"errors":[{"code":195,"message":"Missing or invalid url parameter."}]}
+12:44:50.835185{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:44:51.078649{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:44:51.254929{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:44:51.452601{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:44:51.659903{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:44:51.876300{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:44:52.091938{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:44:52.267245{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:44:52.469231{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:44:52.710505{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:44:52.905899{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:44:53.146084{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:44:53.394532{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:44:53.602523{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:44:53.808407{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:44:53.983126{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:44:54.227855{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:44:54.420939{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:44:54.624404{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:44:54.815430{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:44:55.016895{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:44:55.235471{"errors":[{"message":"Rate limit exceeded","code":88}]}
+12:58:35.938704Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Read timed out. (read timeout=60)
+12:58:36.144421{"errors":[{"code":195,"message":"Missing or invalid url parameter."}]}
+12:58:36.337716{"errors":[{"code":195,"message":"Missing or invalid url parameter."}]}
+12:58:47.811754{"errors":[{"code":195,"message":"Missing or invalid url parameter."}]}
+12:59:20.542974{"errors":[{"code":195,"message":"Missing or invalid url parameter."}]}
+13:14:41.951210Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Read timed out. (read timeout=60)
+13:30:47.031683Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Read timed out. (read timeout=60)
+13:47:01.733082Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Read timed out. (read timeout=60)
+13:48:44.480174{"errors":[{"code":195,"message":"Missing or invalid url parameter."}]}
+13:48:45.104497{"errors":[{"code":195,"message":"Missing or invalid url parameter."}]}
+14:03:07.545236Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Read timed out. (read timeout=60)
