@@ -1,6 +1,7 @@
 from metamind.api import set_api_key, twitter_text_classifier, ClassificationData, ClassificationModel, set_api_key
 
-set_api_key("5eqwiKI50ym253djlf84VEgQptIb5odohKFpgS1SSWOdeGDzQ3")
+#Set the metamind API key for my account
+set_api_key("IpdP8N0nsPmYstaqwqL1CWpPWfxxETCj5BzQWa7ANN6ChZ9PYS")
 
 #Using the MetaMind API we can look up things 
 #print twitter_text_classifier.query_and_predict("comcast")
