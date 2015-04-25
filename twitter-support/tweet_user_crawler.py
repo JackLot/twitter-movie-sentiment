@@ -3,7 +3,8 @@
 
 from __future__ import print_function
 
-import json, string, tweepy, codecs, io, datetime
+import json, string, tweepy, io, datetime
+
 
 def read_file_lines(file_name):
     f = open(file_name, "r")
@@ -11,9 +12,11 @@ def read_file_lines(file_name):
     f.close()
     return lines
 
+
 def generate_search_terms(movie):
-    remove_punctuation_map = dict((ord(char), None) for char in string.punctuation)
-    movie = movie.translate(remove_punctuation_map)
+    # remove_punctuation_map = dict((ord(char), None) for char in string.punctuation)
+    # movie = movie.translate(remove_punctuation_map)
+    movie = str(movie).translate(None, string.punctuation)
     lower_movie = movie.lower()
     parts = movie.split(' ')
     lower_parts = lower_movie.split(' ')
@@ -30,7 +33,21 @@ def generate_search_terms(movie):
         '@' + '_'.join(parts),
         '#' + ''.join(parts),
         '@' + ''.join(parts),
-        ''.join(parts)
+        ''.join(parts),
+        # Quoted
+        '"#' + '_'.join(lower_parts) + '"',
+        '"@' + '_'.join(lower_parts) + '"',
+        '"' + '_'.join(lower_parts) + '"',
+        '"#' + ''.join(lower_parts) + '"',
+        '"@' + ''.join(lower_parts) + '"',
+        '"' + ''.join(lower_parts) + '"',
+        '"' + movie.lower() + '"',
+        '"' + movie + '"',
+        '"#' + '_'.join(parts) + '"',
+        '"@' + '_'.join(parts) + '"',
+        '"#' + ''.join(parts) + '"',
+        '"@' + ''.join(parts) + '"',
+        '"' + ''.join(parts) + '"'
     ]
     print(terms)
     return terms
@@ -53,40 +70,37 @@ def get_tweets(movie):
     except tweepy.TweepError as e:
         with open('error_log', "a+") as f:
             f.write(str(datetime.datetime.now().time()) + str(e) + "\n")
-        return False
+        return []
     return all_tweets
 
 
 def main():
-    files = {
-        "data_sets/recent/100_2015_popular_feature_films.txt": "data_sets/recent/tweets/",
-        "data_sets/good/100_best_2014_rt.txt.clean": "data_sets/good/tweets/",
-        "data_sets/bad/100_worst_all_time_imdb.txt": "data_sets/bad/tweets/"
-    }
+    files = [
+        "data_sets/recent/",
+        "data_sets/good/",
+        "data_sets/bad/",
+    ]
 
-    for file_name, data_dir in files.iteritems():
+    for data_dir in files:
         complete_file = data_dir + 'complete'
-        print(complete_file)
         with io.open(complete_file, "r", encoding="utf-8") as f:
             movies_done = f.read().splitlines()
-            print(movies_done)
-        with open(file_name, "r") as f:
-            lines = f.read().splitlines()
-        json_data = lines[1]
-        py_json = json.loads(json_data)
-        for pair in py_json:
+        with open(data_dir + 'movies.json', "r") as f:
+            py_json = json.load(f)
+        for pair in py_json['movies']:
             movie = pair['movie']
             if movie not in movies_done:
                 tweets = get_tweets(movie)
                 json_tweets = []
-                if tweets is not False:
+                if tweets:
                     for tweet in tweets:
                         json_tweets.append({"tweet_text": tweet.text})
-                    with open(data_dir + '_'.join(movie.split(' ')) + '_tweets.json', 'w+') as f:
+                    with open(data_dir + 'tweets/' + '_'.join(movie.split(' ')) + '_tweets.json', 'w+') as f:
                         f.write(json.dumps(json_tweets))
                     with io.open(complete_file, "a+", encoding="utf-8") as f:
                         line = movie + "\n"
                         f.write(line)
 
 if __name__ == '__main__':
+    # print(str(get_tweets("Movie 43")))
     main()
