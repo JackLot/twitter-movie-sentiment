@@ -10,7 +10,7 @@ classifier = ClassificationModel(id=25412)
 #Define the file paths to our data
 tsv_tweets = "datasets/tweets/"
 tweets_out = "datasets/tweets_out/"
-tweet_types = ["good", "bad", "recent"]
+tweet_types = ["recent"]
 
 #Loop through each folder of good, bad and recent tweets and run
 #the classifier on it

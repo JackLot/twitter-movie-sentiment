@@ -42,6 +42,6 @@ for type in tweet_types:
   #Loop through each movie tweet file
   for movie_tweets_file in os.listdir(rel_path):
 
-    movie_name = movie_tweets_file#[:-5]
-    print type + " " + movie_name[-11:]
-    #to_mm_tsv(rel_path + movie_tweets_file, rel_out_path + movie_name + ".tsv")
+    movie_name = movie_tweets_file[:-12]
+    #print movie_name
+    to_mm_tsv(rel_path + movie_tweets_file, rel_out_path + movie_name + ".tsv")
