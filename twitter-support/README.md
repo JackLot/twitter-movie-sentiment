@@ -1,7 +1,7 @@
 
 #Twitter Support Tool
 
-This tool require the tweepy module.
+This tool requires the tweepy module: https://github.com/tweepy/tweepy.
 
 For the purpose of collecting data we wrote movie_tweets_collector.py.
 A main method is defined that will be run when this file is passed to the python command on the command line: 
