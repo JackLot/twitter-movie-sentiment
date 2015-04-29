@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
-from __future__ import print_function
-
-import json, string, tweepy, io, datetime
+import json
+import string
+import tweepy
+import io
+import datetime
+import os
 
 
 def read_file_lines(file_name):
@@ -14,8 +16,6 @@ def read_file_lines(file_name):
 
 
 def generate_search_terms(movie):
-    # remove_punctuation_map = dict((ord(char), None) for char in string.punctuation)
-    # movie = movie.translate(remove_punctuation_map)
     movie = str(movie).translate(None, string.punctuation)
     lower_movie = movie.lower()
     parts = movie.split(' ')
@@ -49,12 +49,11 @@ def generate_search_terms(movie):
         '"@' + ''.join(parts) + '"',
         '"' + ''.join(parts) + '"'
     ]
-    print(terms)
     return terms
 
 
 def get_tweets(movie):
-    auth_data = read_file_lines("auth.txt")
+    auth_data = read_file_lines("gedalia_auth.txt")
     # get consumer key, consumer secret at https://apps.twitter.com/
     auth = tweepy.OAuthHandler(auth_data[0], auth_data[1])
     # get access token, access token secret at https://apps.twitter.com/
@@ -63,7 +62,6 @@ def get_tweets(movie):
     all_tweets = []
     terms = generate_search_terms(movie)
     query = " OR ".join(terms)
-    print(query)
     try:
         for status in tweepy.Cursor(api.search, q=query, lang='en', result_type='recent', count=100).items(1000):
             all_tweets.append(status)
@@ -78,12 +76,14 @@ def main():
     files = [
         "data_sets/recent/",
         "data_sets/good/",
-        "data_sets/bad/",
+        "data_sets/bad/"
     ]
 
     for data_dir in files:
+        if not os.path.exists(data_dir + 'tweets'):
+            os.makedirs(data_dir + 'tweets')
         complete_file = data_dir + 'complete'
-        with io.open(complete_file, "r", encoding="utf-8") as f:
+        with io.open(complete_file, "a+", encoding="utf-8") as f:
             movies_done = f.read().splitlines()
         with open(data_dir + 'movies.json', "r") as f:
             py_json = json.load(f)
@@ -102,5 +102,4 @@ def main():
                         f.write(line)
 
 if __name__ == '__main__':
-    # print(str(get_tweets("Movie 43")))
     main()

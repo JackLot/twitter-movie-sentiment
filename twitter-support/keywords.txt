@@ -1,9 +1,0 @@
-each
-word
-or
-"word phrase"
-should
-be
-in
-one
-line
