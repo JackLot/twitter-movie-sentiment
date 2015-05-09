@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{lineno}
+\usepackage{lipsum}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\title{Twitter Movie Sentiment}
+
+\author{Names of group members here}
+
+\maketitle
+
+
+\noindent \textbf{ABSTRACT}: \textbf{Write a short abstract here}: \lipsum[1-1]
+~\\ 
+%% keywords here
+\textbf{Keywords}: sample; keywords; describing; the; project; separated; by; \textit{;}
+
+%% main text
+\section{Introduction}\label{S:1}
+\textbf{Explain the problem in details and generally explain the method and results. Give proper citations here \cite{Smith:2013jd}	.} \lipsum[1-6]
+\section{Method}\label{S:2}
+\textbf{Explain your approach in details here. If applicable, you may illustrate the general architecture of your approach.}
+\subsection{Data Sets}\label{S:3}
+To test our classifier on tweets from Twitter we needed: 
+\begin{itemize}
+  \item Lists of movies to get tweets about
+  	\begin{itemize}
+  		\item 100 movies ranked as good
+  		\item 100 movies ranked as bad
+  		\item 100 movies that were recently released
+  	\end{itemize}
+  \item Tweets on each of the above  to classify
+  	\begin{itemize}
+  		\item 1,000 tweets per movie
+  	\end{itemize}
+  \item Pre-determined Rankings of the movies from the above lists for comparison with the classifiers results
+\end{itemize}
+This makes for a total of 300 movies and their rankings and 300,000 tweets.
+\subsubsection{Movies and Rankings Data}\label{S:4}
+We collected the movies from Rotten Tomatoes and the Internet Movie Database (IMDb). Rotten Tomatoes and IMDb had lists of movies ranked by categories matching our exact needs: good, bad, and recent. Our sources are included in our datasets, where we list the URLs used to obtain the movie titles and their rankings.
+We scraped the HTML for the movie names and their associated scores. We then saved the data to text files in JSON format for later processing. Scores from the individual sites were in different scales. IMDb ranks movies on a scal of 1 to 10 while Rotten Tomatoes ranks movies by percentages. We normalized all scores to be on a scale of 1 to 10.
+\subsubsection{Twitter Tweets Collection}
+We collected 1,000 tweets per movie so we could classify the movie with our own classifier. This collection process was accomplished using the Twitter REST API (GET search/tweets). We provided the same style of query for each movie in our requests. The following is the query used to collect tweets on Ex Machina:
+\begin{verbatim}
+#ex_machina OR @ex_machina OR ex_machina OR #exmachina 
+OR @exmachina OR exmachina OR ex machina OR Ex Machina 
+...
+OR "#Ex_Machina" OR "@Ex_Machina" OR "#ExMachina" 
+OR "@ExMachina" OR "ExMachina"
+\end{verbatim}
+The code that generates the query is provided with the project. The queries were tested informally to see what would provide the best results without skewing the results for any particular movie. We found this to be the best option. Further testing and post-processing/analysis of tweets can be utilized in the future to get better tweets and remove tweets that do not actually reference the movie.
+Tweets found were stored in JSON format for later consumption by the classifier.
+\section{Experimental Results}\label{S:2}
+\textbf{Explain the results of your study in details here. Illustrate the results in Tables and Figures and discuss the insights you obtained from them.} \lipsum[1-9]
+
+
+\bibliographystyle{plain}
+\bibliography{sample}
+
+\end{document}

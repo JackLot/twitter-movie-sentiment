@@ -53,7 +53,7 @@ def generate_search_terms(movie):
 
 
 def get_tweets(movie):
-    auth_data = read_file_lines("gedalia_auth.txt")
+    auth_data = read_file_lines("auth.txt")
     # get consumer key, consumer secret at https://apps.twitter.com/
     auth = tweepy.OAuthHandler(auth_data[0], auth_data[1])
     # get access token, access token secret at https://apps.twitter.com/
@@ -62,6 +62,7 @@ def get_tweets(movie):
     all_tweets = []
     terms = generate_search_terms(movie)
     query = " OR ".join(terms)
+    print query
     try:
         for status in tweepy.Cursor(api.search, q=query, lang='en', result_type='recent', count=100).items(1000):
             all_tweets.append(status)
