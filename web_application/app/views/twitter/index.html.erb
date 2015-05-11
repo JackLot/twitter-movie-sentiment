@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+
+<html>
+<body>
+<div id="container">
+	<div id="twitter">
+		<div class="page-header text-center">
+			<h1>Twitter Movie Sentiment Analysis <small>CMSC498J</small></h1>
+		</div>
+	  		<div class="input-group">
+				<input type="text" class="form-control" id="movieInput" placeholder="Enter Movie">
+				<span class="input-group-btn">
+				<button class="btn btn-default" id = "movieSubmit" onclick="searchMovie()">Submit</button>
+				</span>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<p id="p1"></p>
+					<p id="movie_name"></p>
+					<p id="rotten_tomatoes_rating"></p>
+					<p id="twitter_rating"></p>
+					<p id="sentiwordnet_rating"></p>
+				</div>
+				<div class="col-md-8" id = "tweets-div">
+					<table id = "tweets" class="table table-hover">
+					</table>
+				</div>
+			</div>
+	</div>
+	<div id="sentiwordnet">
+		<div class="page-header text-center">
+			<h1>SentiWordNet <small>Opinion Mining</small></h1>
+		</div>
+		<img src="sentiwordnetdist.png" style="width:800px"/>
+		
+	</div>
+
+	
+</div>
+
+</body>
+<script>
+
+
+$(document).ready(function() {
+var movieNames = [];
+function getMovieList(badFile, goodFile, recentFile)
+{
+    var xobjBad = new XMLHttpRequest();
+	xobjBad.open('GET', badFile, false);
+	xobjBad.onreadystatechange = function () {
+		if (xobjBad.readyState == 4 && xobjBad.status == "200") {
+			var lines = xobjBad.responseText.split('\n');
+			for (var line = 0; line < lines.length; line++){
+				addToMovies(movieNames, lines[line]);
+			}
+		}
+	}
+	var xobjGood = new XMLHttpRequest();
+	xobjGood.open('GET', goodFile, false);
+	xobjGood.onreadystatechange = function () {
+		if (xobjGood.readyState == 4 && xobjGood.status == "200") {
+			var lines = xobjGood.responseText.split('\n');
+			for (var line = 0; line < lines.length; line++){
+				addToMovies(movieNames, lines[line]);
+			}
+		}
+	}
+	var xobjRecent = new XMLHttpRequest();
+	xobjRecent.open('GET', recentFile, false);
+	xobjRecent.onreadystatechange = function () {
+		if (xobjRecent.readyState == 4 && xobjRecent.status == "200") {
+			var lines = xobjRecent.responseText.split('\n');
+			for (var line = 0; line < lines.length; line++){
+				addToMovies(movieNames, lines[line]);
+			}
+		}
+	}
+	xobjBad.send(null);
+	xobjGood.send(null);
+	xobjRecent.send(null);
+}
+function addToMovies(movieNames, movie){
+	movieNames.push({num: movie});
+}
+getMovieList("/classification_output/bad/complete","/classification_output/good/complete","/classification_output/recent/complete");
+
+	var movies = new Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('num'),
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  local: movieNames
+});
+
+// initialize the bloodhound suggestion engine
+movies.initialize();
+// instantiate the typeahead UI
+$('#movieInput').typeahead({
+	hint: true,
+	highlight: true,
+	minLength: 1
+}, {
+  displayKey: 'num',
+  source: movies.ttAdapter()
+});
+})
+</script>
+
+</html>

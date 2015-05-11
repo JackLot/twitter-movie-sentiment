@@ -1,0 +1,9 @@
+== README
+
+* Webapp HTML index is located at https://github.com/dshawmemaybe/ripple/blob/master/app/views/twitter/index.html.erb
+
+* Relevant javascript file for calculating twitter score located at https://github.com/dshawmemaybe/ripple/blob/master/app/assets/javascripts/reviews.js
+
+* SentiWordNet.java is located at https://github.com/dshawmemaybe/ripple/blob/master/SentiWordNet/src/SentiWordNet.java
+
+

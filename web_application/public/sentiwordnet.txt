@@ -1,0 +1,285 @@
+12 O'clock Boys,-0.003
+20,000 Days on Earth,-0.015
+22 Jump Street,0.045
+Alan Partridge,0.001
+Art and Craft,0.037
+A Field in England,0.007
+A Girl Walks Home Alone at Night,0.009
+A Most Wanted Man,0.059
+A Summer's Tale,-0.004
+Bears,0.006
+Big Hero 6,0.042
+Birdman,-0.004
+Blue Ruin,-0.056
+Borgman,-0.003
+Boyhood,0.004
+Calvary,-0.017
+Cheap Thrills,-0.063
+Chef,0.021
+Child's Pose,-0.004
+Citizenfour,0.004
+Citizen Kane,0.009
+Coherence,0.043
+Dawn Of The Planet Of The Apes,0.002
+Dear White People,0.053
+Diplomacy,0.003
+Elaine Stritch Shoot Me,-0.011
+Ernest & Celestine,0.022
+Finding Vivian Maier,0.012
+Force Majeure,-0.017
+Foxcatcher,0.012
+Frank,0.018
+Gloria,-0.002
+Gone Girl,-0.039
+Guardians of the Galaxy,0.013
+How to Train Your Dragon 2,-0.010
+Ida,0.019
+In Bloom,0.016
+Jodorowsky's Dune,0.032
+Joe,0.009
+John Wick,0.014
+Last Days in Vietnam,-0.006
+Leviathan,-0.000
+Le Week-End,-0.009
+Life Itself,0.017
+Like Father, Like Son,0.011
+Live Die Repeat Edge of Tomorrow,0.022
+Locke,0.012
+Love Is Strange,0.047
+Manakamana,0.042
+Mistaken for Strangers,-0.064
+Mr. Turner,-0.001
+National Gallery,0.013
+Nightcrawler,0.008
+Night Moves,0.012
+Obvious Child,0.055
+Omar,0.015
+Only Lovers Left Alive,0.031
+Particle Fever,0.022
+Pride,0.045
+Snowpiercer,0.011
+Song Of The Sea,0.020
+Starred Up,0.069
+Stranger by the Lake,-0.065
+The Babadook,-0.011
+The Blue Room,0.005
+The Dance of Reality,0.009
+The Dog,-0.011
+The Drop,0.013
+The Good Lie,0.055
+The Grand Budapest Hotel,0.056
+The Guest,0.015
+The Imitation Game,-0.169
+The Immigrant,-0.034
+The Kill Team,0.007
+The Last of the Unjust,-0.004
+The LEGO Movie,0.007
+The Lunchbox,0.010
+The Missing Picture,-0.042
+The Normal Heart,-0.012
+The Overnighters,0.005
+The Rocket,-0.001
+The Skeleton Twins,0.010
+The Tale of the Princess Kaguya,-0.006
+The Trip To Italy,0.037
+The Wind Rises,0.003
+Tim's Vermeer,0.049
+Top Five,0.011
+Toy Story 2,0.010
+To Be Takei,0.038
+Two Days, One Night,-0.056
+Under the Skin,-0.009
+Venus in Fur,0.023
+Vertigo,-0.026
+Wetlands,0.004
+We Are the Best!,0.087
+Whiplash,-0.033
+Wild,-0.011
+Willow Creek,0.005
+Winter Sleep,-0.009
+X-Men Days of Future Past,-0.011
+Age of Tomorrow,0.000
+Alone in the Dark,0.035
+Anne B. Real,0.013
+A Fox's Tale,-0.046
+A Story About Love,0.032
+Baby Geniuses,0.017
+Battlefield Earth,-0.002
+Ben & Arthur,0.017
+Birdemic 2  The Resurrection,-0.010
+Birdemic  Shock and Terror,-0.083
+Blubberella,-0.057
+Body in the Web,0.030
+Breaking Wind,0.008
+Brothers in Arms,-0.023
+Chairman of the Board,0.011
+Copper Mountain,0.001
+Crossover,0.004
+Danes Without a Clue,-0.000
+Demon Island,0.040
+Devil Fish,-0.021
+Die Hard Dracula,-0.030
+Disaster Movie,-0.022
+Dream.net,0.027
+Drona,0.011
+Eegah,-0.003
+Epic Movie,0.047
+Final Justice,0.004
+Foodfight!,0.021
+From Justin to Kelly,0.001
+Ghosts Can't Do It,-0.025
+Gigli,0.020
+Girl in Gold Boots,-0.013
+Glitter,0.021
+Going Overboard,-0.066
+Gunday,0.018
+Himmatwala,0.015
+Hobgoblins,-0.002
+House of the Dead,-0.040
+Humshakals,0.007
+Invasion of the Neptune Men,-0.041
+I Accuse My Parents,-0.027
+Laserblast,0.034
+Lawnmower Man 2  Beyond Cyberspace,0.005
+Leonard Part 6,-0.006
+Manos  The Hands of Fate,0.009
+Merlin's Shop of Mystical Wonders,0.013
+Mitchell,0.011
+Movie 43,0.025
+Nine Lives,0.014
+Pledge This!,0.008
+Prince of Space,-0.002
+R.O.T.O.R.,0.018
+Run for Your Wife,0.007
+Santa Claus,0.039
+Santa Claus Conquers the Martians,0.047
+Santa with Muscles,0.015
+Saving Christmas,0.055
+Seven Mummies,-0.006
+Simon Sez,0.006
+Son of the Mask,-0.027
+Soultaker,0.012
+Space Mutiny,0.007
+Superbabies  Baby Geniuses 2,0.004
+Surf School,0.019
+Tees Maar Khan,-0.004
+Theodore Rex,0.010
+The Bat People,0.001
+The Beast of Yucca Flats,-0.017
+The Blade Master,0.030
+The Creeping Terror,-0.022
+The Final Sacrifice,0.015
+The Hottie & the Nottie,0.004
+The Maize  The Movie,-0.022
+The Pumaman,0.005
+The Starfighters,0.030
+The Tony Blair Witch Project,-0.026
+The Touch of Satan,-0.009
+The Underground Comedy Movie,0.009
+The Wild World of Batwoman,-0.068
+Time Chasers,0.017
+Titanic  The Legend Goes On...,0.001
+Track of the Moon Beast,-0.012
+Turks in Space,0.000
+Warrior of the Lost World,-0.020
+Yes Sir,0.090
+Zombie Nation,-0.004
+Zombie Nightmare,-0.023
+Accidental Love,0.048
+Any Day,0.021
+An Act of War,-0.016
+Avengers Grimm,-0.018
+Avengers  Age of Ultron,0.014
+A Girl Like Her,0.017
+Baby,0.018
+Beyond the Mask,0.011
+Blackhat,0.012
+Broken Horses,-0.012
+Brooklyn,0.023
+Careful What You Wish For,0.140
+Chappie,0.014
+Child 44,0.008
+Cinderella,-0.024
+Danny Collins,0.013
+Dark Places,-0.018
+David and Goliath,0.003
+Dead Rising  Watchtower,-0.041
+Detective Byomkesh Bakshy!,0.021
+Devil's Backbone, Texas,0.008
+Dial a Prayer,0.010
+Digging for Fire,-0.008
+Dope,-0.008
+Dragon Blade,0.003
+Every Thing Will Be Fine,0.056
+Ex Machina,0.007
+Fifty Shades of Grey,0.025
+Focus,0.018
+Freetown,-0.008
+Furious Seven,0.012
+Get Hard,-0.030
+Home,0.001
+Home Sweet Hell,0.005
+Hot Tub Time Machine 2,0.016
+I'll See You in My Dreams,-0.038
+Insurgent,0.001
+I Am Michael,-0.025
+Jauja,0.022
+Jupiter Ascending,0.005
+Kidnapping Mr. Heineken,0.004
+Knight of Cups,0.004
+Knock Knock,-0.008
+Last Knights,-0.024
+Loaded,-0.022
+Max,0.003
+McFarland, USA,0.017
+Me and Earl and the Dying Girl,0.015
+Mortdecai,0.003
+Mr. Holmes,0.008
+Muck,-0.024
+Nightlight,-0.003
+Parallels,0.004
+Paul Blart  Mall Cop 2,-0.027
+Queen of the Desert,0.007
+Residue,0.016
+Results,0.011
+Roy,0.014
+Run All Night,0.010
+Russell Madness,0.003
+Shaun the Sheep Movie,0.023
+Sleeping with Other People,-0.036
+Slow West,0.002
+Spy,0.006
+Strange Magic,-0.015
+Superfast!,0.008
+Sword of Vengeance,-0.019
+The Age of Adaline,0.008
+The Atticus Institute,0.005
+The Boy Next Door,0.020
+The Bronze,0.002
+The Culling,-0.002
+The DUFF,0.003
+The D Train,-0.007
+The Final Girls,-0.002
+The Girl Is in Trouble,-0.016
+The Gunman,-0.008
+The Intruders,0.015
+The Lazarus Effect,-0.065
+The Longest Ride,0.015
+The Lovers,0.020
+The Man with the Iron Fists 2,0.013
+The Night Crew,0.023
+The Riot Club,0.006
+The Stanford Prison Experiment,0.002
+The Walking Deceased,0.020
+The Wedding Ringer,0.008
+The World Made Straight,-0.065
+Tracers,0.010
+Trainwreck,0.005
+True Story,0.033
+Unfinished Business,-0.068
+Vice,0.024
+Walter,-0.006
+What Now,0.009
+Wild Card,-0.027
+Woman in Gold,0.001
+Z for Zachariah,0.000
