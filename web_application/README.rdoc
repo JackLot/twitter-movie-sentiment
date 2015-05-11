@@ -1,4 +1,4 @@
-== README
+== Important files
 
 * Live webapp located at: http://leonardowater.herokuapp.com/twitter-sentiment
 
