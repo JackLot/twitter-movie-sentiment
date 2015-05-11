@@ -1,8 +1,19 @@
 \begin{thebibliography}{1}
 
-\bibitem{Smith:2013jd}
-A.~B. Jones and J.~M. Smith.
-\newblock Article title.
-\newblock {\em Conference / Journal Title}, volume(number):page numbers, year.
+\bibitem{Sentiword:2010}
+S. Baccianella, A. Esuli, and F. Sebastiani
+\newblock  Sentiwordnet 3.0: An enhanced lexical resource for sentiment analysis and opinion mining.
+\newblock {\em Proceedings
+of the 7th conference on International Language Resources and Evaluation (LREC '10)}, 2200-2204, 2010.
+
+\bibitem{TwitterSentiment:2011}
+L. Jiang, M. Yu, M. Zhou, X. Liu, T. Zhao
+\newblock Target-dependent Twitter Sentiment Classification.
+\newblock {\em Proceedings of the 49th Annual Meeting of the Association for ComputationalLinguistics (ACL-2011)}, 2011.
+
+\bibitem{SemEval:2014}
+\newblock SemEval-2014 Task 1.
+\newblock {\em http://alt.qcri.org/semeval2014/task1/}, 2014.
+
 
 \end{thebibliography}
