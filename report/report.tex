@@ -2,10 +2,8 @@
 
 \usepackage{graphicx}
 \usepackage{amssymb}
-\usepackage{lineno}
-\usepackage{lipsum}
 \usepackage[utf8]{inputenc}
-\usepackage[margin=1.2in]{geometry}
+%%\usepackage[margin=1.5in]{geometry}
 \usepackage{graphicx}
 
 \graphicspath{ {images/} }
@@ -19,16 +17,42 @@
 \maketitle
 
 
-\noindent \textbf{ABSTRACT}: \textbf{Write a short abstract here}: \lipsum[1-1]
+\noindent \textbf{ABSTRACT}:
+Movie opinions of the general population are somewhat hard to come by. In this paper, we look at a 
+way to take advantage of the numerous movie opinions posted on Twitter. Using our own classifier, we 
+evaluate tweets about movies as positive, negative, or neutral, and determine an aggregate score for 
+each movie based on the tweets about it. This score can then be compared to the critic score of that 
+movie to get an idea of how effective our tool is. In addition, we look at how SentiWordNet \cite{Sentiword:2010} can be used 
+to help in the analysis of tweets as positive, negative, and neutral.
+
 ~\\ 
 %% keywords here
-\textbf{Keywords}: movie sentiment; twitter, MetaMind \textit{;}
+\textbf{Keywords}: Twitter\textit{;} Sentiment Analysis\textit{;} Movie Reviews\textit{;}
 
 %% main text
 \section{Introduction}\label{S:1}
-\textbf{Explain the problem in details and generally explain the method and results. Give proper citations here \cite{Smith:2013jd}	.} \lipsum[1-6]
+Our current standard for what makes a good movie review is based on critic’s opinions and those who 
+avidly participate in the movie review community. The most popular movie review sites follow this
+standard: Rotten Tomatoes solely shows critic reviews and account member reviews and IMDB solely 
+shows account member reviews. These reviews are based on the opinions of a small portion of the 
+population and are oftentimes delayed. Meanwhile, we have an enormous amount of people tweeting 
+their opinions of various movies immediately after leaving the theaters. Tweets such as “Boyhood was 
+much better than I expected” and “I don’t understand why people like Big Hero 6” provide insight into 
+the general population’s opinion of a given movie. By aggregating these opinions into one average 
+percent positive score, we can provide a real time “score” for a movie that represents the opinions of 
+the many Twitter users viewing that movie.
+
+Our general method involved three datasets: a list of movies, the thousands of tweets about these 
+movies, and the movies’ Rotten Tomatoes scores. We started by aggregating the tweets about each 
+movie. Using our own classifier, we determined if each of these tweets, in general, was positive or 
+negative. After marking each tweet and ignoring neutral tweets, we determined what 
+percent of the tweets were positive. This percent gave a score for the movie that we were the able to 
+compare to the Rotten Tomatoes movie score, which gives a percent of positive critic reviews.
+To take our project further we ran SentiWordNet \cite{Sentiword:2010} Analysis on our dataset of tweets. SentiWordNet 
+evaluates terms on a spectrum of positive, negative, and objective. By evaluating tweets with 
+SentiWordNet’s dictionary, we were able to get another score for movies that represent the positivity of 
+tweets about that movie.
 \section{Method}\label{S:2}
-\textbf{Explain your approach in details here. If applicable, you may illustrate the general architecture of your approach.}
 \subsection{Data Sets}\label{S:3}
 To test our classifier on tweets from Twitter we needed: 
 \begin{itemize}
@@ -61,7 +85,7 @@ The code that generates the query is provided with the project. The queries were
 Tweets found were stored in JSON format for later consumption by the classifier.
 Only recent tweets in the English language were requested being that we can only use English text and we wanted to avoid pulling popular tweets intentionally so they wouldn't skew the data.
 \subsection{Classifying Tweets}\label{S:3}
-In addition to gathering tweets, we also worked on creating a classifier to analyze and differentiate between tweets which had positive, negative or neutral sentiment toward a movie. 
+In addition to gathering tweets, we also worked on creating a classifier to analyze and differentiate between tweets which had positive, negative or neutral sentiment toward a movie. (Although we used the 2011 article, Target-dependent Twitter Sentiment Classification \cite{TwitterSentiment:2011} as inspiration for our project, our methods deviated significantly as we attempted to produce a working prototype for this project)
 \subsection{Wrangling Training/Testing Data}\label{S:4}
 To train our classifier, we opted to use the training/testing approach to teach our classifier. Since this problem was not researched in the past, training on a nicely currated set of tweets about movies was not an option. Instead we researched different datasets related to movies and narrowed it down a dataset from the data science website Kaggle. This dataset featured 221,000 movie reviews from RottenTomatoes broken down by sentence and labeled using crowdsourcing by Amazon's Mechanical Turk. Each labeled entry ranged in length from one word to no more than a sentence, allowing our classifier to become more adept at spotting small clues present in tweets which may indicate sentiment. After writing a script to split and reformat the data we ended up with a 3 class (positive, negative and neutral), and 5 class (positive, somewhat positive, negative, somewhat negative and neutral) data files, each with 156,000 training reviews and 65,000 testing reviews. The final format was as follows:
 \begin{verbatim}
@@ -74,10 +98,9 @@ To train our classifier, we opted to use the training/testing approach to teach 
 3   none
 \end{verbatim}
 \subsection{Building the Classifier}\label
-To build the classifier, we looked into a couple implementations of machine learning, focusing on NLP, to get the greatest accuracy we could: Vowpal Wabbit and MetaMind. After attempting to work with Vowpal Wabbit it was clear we needed a more approachable solution for the project given our overall lack of knowledge into the field of ML: this where MetaMind came in. MetaMind is a machine learning API developed by Stanford PhD graduate Richard Socher and developed by such minds as Ruslan Belkin, formally of Salesforce, RelateIQ and Twitter. MetaMind has done extremely well in text classification: scoring a 83.4 Pearson Correlation Coefficent Score in the SemEval 2014 competition <CITE THIS> beating out top attempts by University of Texas, Stanford and Illinois.
+To build the classifier, we looked into a couple implementations of machine learning, focusing on NLP, to get the greatest accuracy we could: Vowpal Wabbit and MetaMind. After attempting to work with Vowpal Wabbit it was clear we needed a more approachable solution for the project given our overall lack of knowledge into the field of ML: this where MetaMind came in. MetaMind is a machine learning API developed by Stanford PhD graduate Richard Socher and developed by such minds as Ruslan Belkin, formally of Salesforce, RelateIQ and Twitter. MetaMind has done extremely well in text classification: scoring a 83.4 Pearson Correlation Coefficent Score in the SemEval 2014 Task 1 competition \cite{SemEval:2014} beating out top attempts by University of Texas, Stanford and Illinois.
 Building on this, we wrote an application in Python which utilized the MetaMind API to create a classifier from our RottenTomatoes training data. Testing on our testing dataset showed our classifier predicted at 67\% acurracy. 
 \section{Experimental Results}\label{S:2}
-\textbf{Explain the results of your study in details here. Illustrate the results in Tables and Figures and discuss the insights you obtained from them.} \lipsum[1-9]
 \subsection{Classifying Tweets}\label{S:3}
 To run our newely created classifier on our library of tweets we wrote a script to reformat and standardize our tweets using RegEx to remove irrelevant and non-standard complient characters. Additionally, our culminating program consolidated and fed tweets into our classifier. After a few hours, we had JSON formatted output of tweets along with our predicted sentiment formatted as follow: 
 \begin{verbatim}
@@ -88,9 +111,9 @@ To run our newely created classifier on our library of tweets we wrote a script 
   	 0.9619668949957287, u'label': u'5'}
 ]
 \end{verbatim}
-With this data we were able to calculate a final metric of whether twitter users \"rated\" a movie as good (mostly positive) or bad (mostly negative).
+With this data we were able to calculate a final metric of whether twitter users “rated” a movie as good (mostly positive) or bad (mostly negative).
 \subsection{Analyzing Results}\label{S:3}
-After collecting the necessary data and tweets, we created a webapp which can be found at http://leonardowater.herokuapp.com/twitter-sentiment. Our webapp allows users to search for a movie and after selecting a movie, the corresponding tweets are shown with positive tweets highlighted in green, negative tweets highlighted in red, and neutral tweets not highlighted. Along with the tweets, our webapp displays the Rotten Tomatoes score, our own computed Twitter Score, our computed SentiWordNet Score, as well as a dynamically-generated pie chart that visually represents the distribution of positive (green), negative (red), and neutral tweets (blue).
+After collecting the necessary data and tweets, we created a webapp which can be found at {\em http://leonardowater.herokuapp.com/twitter-sentiment}. Our webapp allows users to search for a movie and after selecting a movie, the corresponding tweets are shown with positive tweets highlighted in green, negative tweets highlighted in red, and neutral tweets not highlighted. Along with the tweets, our webapp displays the Rotten Tomatoes score, our own computed Twitter Score, our computed SentiWordNet Score, as well as a dynamically-generated pie chart that visually represents the distribution of positive (green), negative (red), and neutral tweets (blue).
 
 \includegraphics[width=\textwidth]{app}
 
