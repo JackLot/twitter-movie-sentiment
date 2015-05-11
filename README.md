@@ -7,11 +7,11 @@ Given a set of tweets about a movie determine if the Twitter community has a pos
 This project is compsed of 3 general subsections:
 * [twitter-support/](twitter-support/): Gathering tweets from twitter
 * [classification/](classification/): Training a classifier and running our classifier on tweets
-* [web_application/](web_application/): Building a webapp application and using SentiWordNet
+* [web_application/](web_application/): Building a web application and integrating SentiWordNet
 
 *NOTE: Within each main subfolder in this project are more README files can be found which document more in depth content found in that particular folder*
 
-## Final Webapplication
+## Final Web Application
 The culmination of our project is a live web application that can be used to browse our results. Find that here: [http://leonardowater.herokuapp.com/twitter-sentiment](http://leonardowater.herokuapp.com/twitter-sentiment)
 
 ## Report
