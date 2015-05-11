@@ -35,7 +35,7 @@ Using Python scripts we had to reformat the data from Kaggle into files readable
 
 #### MetaMind formatting
 
-By running [classification/wrangle_training_data.py](classification/wrangle_training_data.py) 
+By running [wrangle_training_data.py](wrangle_training_data.py) 
 we output train/test files (rt.train.tsv, rt.test.tsv, rt.train-3.tsv and rt.test-3.tsv) for use with MetaMind's classifier
 building tools. 
 ```
@@ -65,7 +65,7 @@ model builder formatted training data from the Kaggle Rotten Tomatoes dataset.
 We'll start off by building a text classifier with the MetaMind API trained on a dataset of Rotten Tomatoes
 movie reviews.
 
-From [classification/build_classifier_mm.py](classification/build_classifier_mm.py)
+From [build_classifier_mm.py](build_classifier_mm.py)
 ```python
 #Create the classification training data to feed into the model
 training_data = ClassificationData(private=True, data_type="text", name="RT snippets 3 feature training data")
