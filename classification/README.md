@@ -89,8 +89,3 @@ When we ran the classifier using our program [classify_mm.py](classify_mm.py) ag
 ]
 ```
 <small><i>note: Output is given for the 3-class model where 1:negative, 3:neutral and 5:positive)</i></small>
-
-
-## Analyzing our results
-
-Now all that is left is to take the results of feeding our MetaMind and Vowpal Wabbit classifiers tweets, and determine if the number of positive tweets outweights the number of negative tweets (I think we can ignore neutral tweets). We can then compare our overall ranking of positive/negative for the given movie to the RottenTomatoes and IMDb user reviews to see how accuratly we can classify movies just based on tweets.
