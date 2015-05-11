@@ -6,7 +6,7 @@
 
 * **[build_classifier_mm.py](build_classifier_mm.py)**: Takes a training and test test dataset (in our case [rt.test-3.tsv](rt.test-3.tsv), [rt.train-3.tsv](rt.train-3.tsv)) and uses the MetaMind API to train a classifier on the data. The classifier is stored in the cloud by an id number which is referenced by our classification program ([classify_mm.py](classify_mm.py))
 
-* **[classify_mm.py](classify_mm.py)**: Reads unclassified tweets from [datasets/tweets/](datasets/tweets/) and predicts their labels (as either positive, negative or neutral). The labeled data is output as JSON to [datasets/tweets-out/](datasets/tweets-out/) for use by our web application.
+* **[classify_mm.py](classify_mm.py)**: Reads unclassified tweets from [datasets/tweets/](datasets/tweets/) and predicts their labels (as either positive, negative or neutral). The labeled data is output as JSON to [datasets/tweets_out/](datasets/tweets_out/) for use by our web application.
 
 
 ## Training/Test data
