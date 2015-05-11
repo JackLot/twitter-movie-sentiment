@@ -1,1 +1,1 @@
-This folder just contains the labeled data output by our classifier. It is simply copied verbatim from the folder [classification/datasets/tweets-out/](classification/datasets/tweets-out/) in an effort to make it more assesable.
+This folder just contains the labeled data output by our classifier. It is simply copied verbatim from the folder [classification/datasets/tweets_out/](classification/datasets/tweets_out/)
