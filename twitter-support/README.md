@@ -60,8 +60,13 @@ into tweets/[move_title].json formatted as
 ```
 [
     {
-        "tweet_text": "UVA Football: Spring Game preview and keys: It was a tale of two seasons last year 
-                       for the UVA football team, ... http://t.co/AWs8igryxi"
+        "tweet_text": "finally watched boyhood and im speechless wow"
+    }, 
+    {
+        "tweet_text": "Have now seen 5 of the Best Pic nominees. 
+                       Selma, Whiplash, Boyhood, Birdman, Imitation Game. To me, Whiplash CLEARLY the best."
+    }
+   
     },
     ...
 ]
