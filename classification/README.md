@@ -1,3 +1,5 @@
+To view this file nicely formatted view on our github project page: https://github.com/JackLot/twitter-movie-sentiment/tree/master/classification
+
 ## File overview
 
 * **[wrangle_training_data.py](wrangle_training_data.py)**: Takes raw train/test data from Kaggle (found here: [datasets/rt/](datasets/rt/)) and converts it to a MetaMind useable TSV formats. It creates a 5-class train/test set ([rt.test.tsv](rt.test.tsv), [rt.train.tsv](rt.train.tsv)) and a 3-class train/test set ([rt.test-3.tsv](rt.test-3.tsv), [rt.train-3.tsv](rt.train-3.tsv))
