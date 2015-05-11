@@ -1,4 +1,4 @@
-To view this file nicely formatted view on our github project page: https://github.com/JackLot/twitter-movie-sentiment/tree/master/classification
+To view this file nicely formatted, see our github project page: https://github.com/JackLot/twitter-movie-sentiment/tree/master/classification
 
 ## File overview
 
