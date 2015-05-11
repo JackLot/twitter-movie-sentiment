@@ -65,8 +65,6 @@ into tweets/[move_title].json formatted as
     {
         "tweet_text": "Have now seen 5 of the Best Pic nominees. 
                        Selma, Whiplash, Boyhood, Birdman, Imitation Game. To me, Whiplash CLEARLY the best."
-    }
-   
     },
     ...
 ]
