@@ -1,5 +1,7 @@
-# Twitter Movie Sentiment Analysis
-Given a set of tweets about a movie determine if the Twitter community has a positive or negative overall opinion of that movie. We will use a combination of [MetaMind](https://www.metamind.io/) and/or [Vowpal Wabbit](http://hunch.net/~vw/) classifiers to build our models and test them with tweets pulled using the Twitter API.
+## File overview
+
+[wrangle_training_data.py](wrangle_training_data.py): Takes raw train/test data from Kaggle (found here: [datasets/rt/](datasets/rt/)) and converts it to a MetaMind useable TSV formats. It creates a 5-class train/test set ([rt.test.tsv](rt.test.tsv), [rt.train.tsv](rt.train.tsv)) and a 3-class train/test set ([rt.test-3.tsv](rt.test-3.tsv), [rt.train-3.tsv](rt.train-3.tsv))
+
 
 ## Training/Test data
 Since this problem hasn't been studied much before we will train our models with datasets that are closely related
@@ -8,6 +10,8 @@ to our problem: movie reviews on movie review websites (i.e. Rotten Tomatoes).
 We used a dataset from Kaggle.com -- [Sentiment Analysis on Movie Reviews dataset] (http://www.kaggle.com/c/sentiment-analysis-on-movie-reviews/data) -- 
 which provided us with a file containing snippets of movie reviews 
 along with the sentiment associated with each part of the sentence (Sentiment => 0: negative, 1: somewhat negative, 2: neutral, 3: somewhat positive, 4: positive)
+
+Training data [datasets/rt/train.tsv](datasets/rt/train.tsv)
 ```
 PhraseId	SentenceId	Phrase	Sentiment
 104	3	have a hard time sitting through this one	0
@@ -17,10 +21,11 @@ PhraseId	SentenceId	Phrase	Sentiment
 108	3	hard time	1
 ...
 ```
+note: All training/testing data can be found at [datasets/rt/](datasets/rt/)
 
 ## Data Wrangling
 
-Using Python scripts we had to reformat the data from Kaggle into files readable by Vowpal Wabbit and MetaMind.
+Using Python scripts we had to reformat the data from Kaggle into files readable by MetaMind.
 
 #### MetaMind formatting
 
