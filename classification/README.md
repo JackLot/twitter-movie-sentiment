@@ -78,7 +78,7 @@ classifier.fit(training_data)
 
 ### Running the classifier
 
-When we ran the classifier against tweets that we have pulled using the Twitter API, MetaMind gives us output as a JSON list of JSON objects containing our input tweet as well as a label it predicted for that Tweet.
+When we ran the classifier using our program [classify_mm.py](classify_mm.py) against tweets that we have pulled using the Twitter API, MetaMind gives us output as a JSON list of JSON objects containing our input tweet as well as a label it predicted for that Tweet.
 
 ```
 [
