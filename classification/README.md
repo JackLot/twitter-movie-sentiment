@@ -1,6 +1,12 @@
 ## File overview
 
-[wrangle_training_data.py](wrangle_training_data.py): Takes raw train/test data from Kaggle (found here: [datasets/rt/](datasets/rt/)) and converts it to a MetaMind useable TSV formats. It creates a 5-class train/test set ([rt.test.tsv](rt.test.tsv), [rt.train.tsv](rt.train.tsv)) and a 3-class train/test set ([rt.test-3.tsv](rt.test-3.tsv), [rt.train-3.tsv](rt.train-3.tsv))
+*[wrangle_training_data.py](wrangle_training_data.py): Takes raw train/test data from Kaggle (found here: [datasets/rt/](datasets/rt/)) and converts it to a MetaMind useable TSV formats. It creates a 5-class train/test set ([rt.test.tsv](rt.test.tsv), [rt.train.tsv](rt.train.tsv)) and a 3-class train/test set ([rt.test-3.tsv](rt.test-3.tsv), [rt.train-3.tsv](rt.train-3.tsv))
+
+*[wrangle_tweets.py](wrangle_tweets.py): Takes the raw tweets from ([../twitter-support/datasets/](../twitter-support/datasets/)) and formats them as unlabeled TSV files for use by MetaMind. The newely formatted tweets (ready for classification) are written to [datasets/tweets/](datasets/tweets/).
+
+*[build_classifier_mm.py](build_classifier_mm.py): Takes a training and test test dataset (in our case [rt.test-3.tsv](rt.test-3.tsv), [rt.train-3.tsv](rt.train-3.tsv)) and uses the MetaMind API to train a classifier on the data. The classifier is stored in the cloud by an id number which is referenced by our classification program ([classify_mm.py](classify_mm.py))
+
+*[classify_mm.py](classify_mm.py): Reads unclassified tweets from [datasets/tweets/](datasets/tweets/) and predicts their labels (as either positive, negative or neutral). The labeled data is output as JSON to [datasets/tweets-out/](datasets/tweets-out/) for use by our web application.
 
 
 ## Training/Test data
@@ -29,7 +35,7 @@ Using Python scripts we had to reformat the data from Kaggle into files readable
 
 #### MetaMind formatting
 
-By running [classification/wrangle_mm.py](classification/wrangle_mm.py) 
+By running [classification/wrangle_training_data.py](classification/wrangle_training_data.py) 
 we output train/test files (rt.train.tsv, rt.test.tsv, rt.train-3.tsv and rt.test-3.tsv) for use with MetaMind's classifier
 building tools. 
 ```
